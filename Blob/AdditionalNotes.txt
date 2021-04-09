@@ -1,0 +1,16 @@
+Additional notes on Azure storage accounts
+Additional notes on Azure storage accounts
+
+
+1) Upgrading a storage account
+
+If you have a Blob only storage account or a general purpose v1 storage account, you can easily migrate to a General Purpose v2 storage account. The general purpose v2 storage account provides lowest per-gigabyte capacity prices for Azure Storage and has much more features
+
+If you do have such an account, you can just go to the configuration and click on Upgrade
+
+
+2) Changing the replication type for a storage account
+
+If you need to migrate your storage account from Locally redundant storage or Geo-redundant storage  to Zone redundant storage in the primary region with no application downtime, you can request a live migration from Microsoft. During a live migration, you can access data in your storage account, and with no loss of durability or availability. The Azure Storage SLA is maintained during the migration process. There is no data loss associated with a live migration. Service endpoints, access keys, shared access signatures, and other account options remain unchanged after the migration.
+
+Reference - https://docs.microsoft.com/en-us/azure/storage/common/redundancy-migration

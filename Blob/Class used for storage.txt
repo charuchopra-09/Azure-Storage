@@ -1,0 +1,45 @@
+Classes used for Blob storage - Recent version
+This is a quick reference to the new version of the Library used to interact with Blobs
+Azure.Storage.Blobs v12.4.1 dll
+
+1) BlobServiceClient Class - This is used as a logical representation of the Azure Storage account and provdies access to work with the Blob service.
+
+You can use the Constructor of the BlobServiceClient class to pass in the connection string to connect to the Azure Storage account.
+
+You then have methods such as
+
+a) CreateBlobContainer and CreateBlobContainerAsync- This can be used to create a container
+
+b) GetBlobContainerClient - This returns a reference to an existing container
+
+
+
+2) BlobContainerClient - This is used as a logical representation of the container service in the Azure Storage account
+
+You then have methods such as
+
+a) GetBlobClient - This is used to get a logical representation to a blob
+
+b) GetBlobsAsync - This is used to return a list of blobs in a container. Each blob is returned as an object of the class BlobItem
+
+
+
+3) BlobClient - This class is used to work with Azure Storage Blobs
+
+You then have methods such as
+
+a) Upload and UploadAsync - This can be used to upload a blob onto the container
+
+b) Download and DownloadAsync - This can be used to download a blob from the container
+
+
+
+4) BlobItem - This class is used to represent a Blob in a container.
+
+For the BlobItem class , you have properties such as Metadata, Name , Properties and Snapshot
+
+
+
+For a list of references for the recent and last version of the library for the blob service, please refer to the following link
+
+https://docs.microsoft.com/en-us/dotnet/api/overview/azure/storage?view=azure-dotnet
